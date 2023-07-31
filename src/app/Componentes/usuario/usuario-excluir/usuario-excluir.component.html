@@ -1,0 +1,28 @@
+<h1>Tem certeza que deseja Excluir o Usuário?</h1>
+
+<form>
+    <mat-form-field>
+        <input matInput placeholder="Id"
+        [(ngModel)]="usuario.id" name="id" [disabled]="true">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Nome"
+        [(ngModel)]="usuario.nome" name="nome" [disabled]="true">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Telefone" type="number"
+        [(ngModel)]="usuario.telefone" name="telefone" [disabled]="true">
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Endereço"
+        [(ngModel)]="usuario.endereco" name="endereco" [disabled]="true">
+    </mat-form-field>
+</form>
+
+<button mat-raised-button (click)="Excluir()" color="primary" > 
+    Sim
+</button>
+
+<button mat-raised-button routerLink="/usuario" color="primary" > 
+    Não
+</button>
