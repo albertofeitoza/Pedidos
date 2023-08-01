@@ -3,7 +3,7 @@ import { Usuario } from 'src/app/Model/modelUsuario';
 import { ServiceAllService } from 'src/app/Services/service-all.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Endpoint } from 'src/app/Enums/Endpoints';
-import { endWith } from 'rxjs';
+
 
 
 @Component({
@@ -36,11 +36,8 @@ export class UsuarioExcluirComponent {
 
   Excluir(){
     this.serviceUsuario.Excluir(this.usuario.id, Endpoint.Usuario).subscribe(() => {
-      //this.serviceUsuario.showMessage("Usuário Excluido com sucesso!", false);
-   
-
+      this.serviceUsuario.showMessage("Usuário Excluido com sucesso!", false);
     this.rota.navigate(['usuario'])
-    
     })
     
   }
